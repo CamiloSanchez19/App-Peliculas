@@ -1,40 +1,69 @@
 # Movie Explorer
 
-**Movie Explorer** es una aplicación web desarrollada con **React** y **Vite** que permite buscar y explorar películas utilizando la API pública de [The Movie Database (TMDb)](https://www.themoviedb.org/).  
-El proyecto cuenta con un diseño moderno de estilo oscuro, completamente adaptable a diferentes tamaños de pantalla.
+Aplicación web para explorar películas populares y realizar búsquedas por título usando The Movie Database API (TMDb).
 
----
+## Resumen
 
-## Descripción general
+Movie Explorer es una SPA desarrollada con React y Vite enfocada en una experiencia de consulta rápida, visual y responsive. El proyecto incluye manejo de estados de carga y error, componentes reutilizables y una base de estilos moderna con enfoque en legibilidad y jerarquía visual.
 
-La aplicación ofrece una experiencia interactiva al usuario, mostrando una lista de películas populares al inicio y permitiendo realizar búsquedas por título.  
-Cada resultado incluye información básica como el póster y el nombre de la película.  
-El diseño prioriza la usabilidad, la estética y la adaptabilidad visual, manteniendo una estructura clara y una navegación intuitiva.
+## Funcionalidades
 
----
+- Consulta inicial de películas populares.
+- Búsqueda por título en tiempo real a través de TMDb.
+- Tarjetas con póster, año de lanzamiento, calificación y resumen.
+- Estados de interfaz para carga, error y resultados vacíos.
+- Diseño responsive para escritorio, tablet y móvil.
+- Estructura de componentes clara y mantenible.
 
-## Características principales
+## Tecnologías
 
-- Búsqueda de películas por nombre a través de la API de TMDb.  
-- Visualización inicial de las películas más populares.  
-- Interfaz moderna con un esquema de colores oscuros.  
-- Diseño responsive, con disposición de hasta seis columnas en pantallas grandes.  
-- Presentación de información esencial: título y póster.  
-- Animaciones suaves al interactuar con las tarjetas de películas.
+- React 19
+- Vite 7
+- JavaScript (ES Modules)
+- CSS modular por componente
+- ESLint 9
 
----
+## Requisitos
 
-## Tecnologías utilizadas
+- Node.js 18 o superior
+- npm 9 o superior
+- API Key de TMDb
 
-- **React 18** – Biblioteca para la creación de interfaces de usuario.  
-- **Vite** – Herramienta de desarrollo rápida para proyectos modernos de JavaScript.  
-- **CSS** – Hojas de estilo personalizadas sin el uso de frameworks externos.  
-- **The Movie Database API (TMDb)** – Fuente de datos para la búsqueda y listado de películas.  
-- **JavaScript (ES6+)** – Lenguaje de programación principal para la lógica del proyecto.
 
----
+## Estructura del proyecto
 
-👤 Autor
+```text
+src/
+	App.jsx
+	App.css
+	index.css
+	main.jsx
+	components/
+		MovieCard.jsx
+		SearchBar.jsx
+		styles/
+			MovieCard.css
+			SearchBar.css
+public/
+```
 
-Desarrollado por Camilo Sánchez como práctica para aprender React y manejo de estados.
+## Arquitectura y decisiones
+
+- Separación de responsabilidades entre vista principal y componentes de dominio.
+- Consumo de API centralizado en la vista principal.
+- Propagación de datos mediante props explícitas.
+- Estilos organizados por alcance: global, layout y componente.
+- Uso de JSDoc para documentar componentes y props en español.
+
+## Accesibilidad
+
+- Uso de elementos semánticos (header, section, article).
+- Etiquetas asociadas a campos de formulario.
+- Regiones con aria-live para comunicar cambios de estado.
+- Contrastes y tamaños de texto orientados a lectura cómoda.
+
+
+## Autor
+
+Camilo Sánchez
 
